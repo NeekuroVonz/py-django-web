@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+{% block title %}HomePagee{% endblock %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <ol class="list-group list-group-numbered">
+        {% for list in ls %}
+            <li class="mb-3 list-group-item border rounded d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{ list.name }}</div>
+                    Content for list item
+                </div>
+                <div class="justify-content-center" style="top:4px; position: relative;">
+                    <button type="button" class="me-1 btn btn-success">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </li>
+        {% endfor %}
+      </ol>
+{% endblock %}
